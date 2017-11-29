@@ -1,0 +1,204 @@
+$accent_c: #76B72A
+$accent2_c: #e63451
+$main_c: #222222
+$bg_c: #ffffff
+$bg_dark_c: #f4f4f4
+
+$general_fz: 1.8rem
+
+$f4_ascend: url(public/img/triangles/f4_ascend.svg)
+$f4_down_ascend: url(public/img/triangles/f4_down_ascend.svg)
+$f4_descend: url(public/img/triangles/f4_descend.svg)
+$ff_descend: url(public/img/triangles/ff_descend.svg)
+$ascend_22: url(public/img/triangles/22_ascend.svg)
+$descend_22: url(public/img/triangles/22_descend.svg)
+$ff_down_descend: url(public/img/triangles/ff_down_descend.svg)
+$ff_down_ascend: url(public/img/triangles/ff_down_ascend.svg)
+$icon_a: url(public/img/icon_antiexploit_white.svg)
+$disk_green: url(public/img/bullets/disk_green.svg)
+$circle_green: url(public/img/bullets/circle_green.svg)
+$disk_white: url(public/img/bullets/disk_white.svg)
+$circle_white: url(public/img/bullets/circle_white.svg)
+$product_after: url(public/img/product_after.svg)
+$product_before: url(public/img/product_before.svg)
+$blog_arrow_green: url(public/img/blog_arrow_green.svg)
+$about-top: url(public/img/about-top.jpg)
+$about_when_bg: url(public/img/about_when_bg.jpg)
+$team-modal-bg: url(public/img/team-modal-bg.svg)
+$team-vacancy: url(public/img/team-vacancy.jpg)
+$features-bg-left: url(public/img/features-bg-left.svg)
+$features-bg-right: url(public/img/features-bg-right.svg)
+$search-icon: url(public/img/search.svg)
+
+/*Solutions background textures*/
+$antiexploit_down_crop: url(public/img/antiexploit_down_crop.svg)
+$antiexploit_up_crop: url(public/img/antiexploit_up_crop.svg)
+$micropatcher_down_crop: url(public/img/micropatcher_down_crop.svg)
+$webguard_down_crop: url(public/img/webguard_down_crop.svg)
+$webguard_up_crop: url(public/img/webguard_up_crop.svg)
+/*Solutions icons*/
+$icon_solutions_antiexploit: url(public/img/icon_solutions_antiexploit.svg)
+$icon_solutions_micropatcher: url(public/img/icon_solutions_micropatcher.svg)
+$icon_solutions_webguard: url(public/img/icon_solutions_webguard.svg)
+
+
+
+
+%btn
+  display: inline-block
+  padding: 1rem 2rem
+  background-color: transparent
+  transition: 0.5s
+  font-size: 2rem
+  &:hover
+    transition: .3s
+
+%btn-1
+  border: 1px solid $accent_c
+  color: $accent_c
+  &:hover
+    background-color: $accent_c
+    color: $bg_c
+%btn-2
+  border: none
+  background-color:  $accent_c
+  color: #ededed
+  &:hover
+    background-color: #6ba526
+    color: #ededed
+
+%black_text
+  margin: 0 0 10px
+
+
+@mixin border($color: red, $width: 2px)
+  border: $width solid $color
+
+@mixin link($color, $underline, $size)
+  font-size: $size
+  color: $color
+  text-decoration: none
+  border-bottom: 1px solid transparent
+  &:hover
+    text-decoration: none
+
+  @if $underline == true
+    &:hover
+      border-bottom: 1px solid $color
+  @else
+    &:hover
+      border-bottom: 1px solid transparent
+
+@mixin title($color, $size: 4rem)
+  font-size: $size
+  text-transform: uppercase
+  font-weight: 300
+  color: $color
+
+@mixin text($color, $size)
+  color: $color
+  font-family: 'Roboto Condensed',sans-serif
+  font-size: $size
+  padding-top: 1rem
+
+@mixin titled_list($font-size)
+  &__title
+    @include text($main_c, $font-size+0.4rem)
+    padding:
+      top: 3rem
+      bottom: 3rem
+  &__container, ul
+    padding: 0
+    margin: 0
+    &__item, li
+      line-height: 1.5
+      padding:
+        top: 0
+        bottom: 0
+        left: 2rem
+        right: 4rem
+      margin: 6px 0
+
+@mixin section($color, $pt, $pb, $pos: relative)
+  background-color: $color
+  position: $pos
+  padding-top: $pt
+  padding-bottom: $pb
+
+@mixin button($type: 1)
+  display: inline-block
+  padding: 1rem 2rem
+  background-color: transparent
+  transition: 0.15s
+  border: 1px solid transparent
+  &:hover
+    transition: .3s
+  @if ($type == 1)
+    border-color: $accent_c
+    color: $accent_c
+    a
+      color: $accent_c
+    &:hover
+      background-color:  $accent_c
+      border-color: transparent
+      color: $bg_c
+      a
+        color: $bg_c
+  @else if($type == 2)
+    background-color:  $accent_c
+    color: $bg_c
+    a
+      color: $bg_c
+    &:hover
+      border-color: $accent_c
+      background-color: transparent
+      color: $accent_c
+      a
+        color: $accent_c
+  @else if($type == 3)
+    background-color:  $accent2_c
+    border-color: transparent
+    color: $bg_c
+    a
+      color: $bg_c
+    &:hover
+      background-color: transparent
+      border-color: $accent2_c
+      color: $accent2_c
+      a
+        color: $accent2_c
+  @else if($type == 4)
+    background-color: transparent
+    border-color: $accent2_c
+    color: $accent2_c
+    a
+      color: $accent2_c
+    &:hover
+      background-color:  $accent2_c
+      border-color: transparent
+      color: $bg_c
+      a
+        color: $bg_c
+  @else if ($type == 5)
+    background-color:  $accent_c
+    color: $bg_c
+    opacity: .5
+    a
+      color: $bg_c
+    &:hover
+      background-color:  $accent_c
+      color: $bg_c
+      opacity: .5
+      a
+        color: $bg_c
+
+@mixin cube ($height, $color: red)
+  display: block
+  height: $height
+  @include border($color)
+
+
+
+
+
+

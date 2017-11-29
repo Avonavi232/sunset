@@ -1,0 +1,31 @@
+{
+  "name": "embedi_front_loc",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "me"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "normalize.css#^7.0.0",
+    "bootstrap": "^3.3.7",
+    "autosize": "^4.0.0",
+    "slick": "*",
+    "Snap.svg": "snap.svg#^0.5.1",
+    "lodash": "^4.17.4",
+    "async": "^2.5.0",
+    "bowser": "^1.7.3",
+    "jquery.scrollTo": "^2.1.2",
+    "slick-carousel": "^1.8.0",
+    "reset-css": "^2.2.1"
+  }
+}
